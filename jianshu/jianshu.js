@@ -78,3 +78,31 @@ downloadBox.onmouseover = function(){
 downloadBox.onmouseout = function(){
     bigIcon.style.display = 'none';
 };
+
+
+
+window.onscroll = function(){
+    var t = document.documentElement.scrollTop || document.body.scrollTop;  //获取距离页面顶部的距离
+    var uptop = document.getElementById( "uptop" ); //获取div元素
+    if( t >= 300 ) {
+        console.log(t);
+        uptop.style.bottom=50+'px';
+    } else {
+        uptop.style.bottom=-100+'px';
+    }
+};
+var top=document.getElementById("to-top");
+top.onclick = function(){
+    var timer;
+    timer=setInterval(function(){
+        var ct = document.documentElement.scrollTop || document.body.scrollTop; //获取距离顶部的距离
+        ct-=50;
+        if(ct>0){
+            window.scrollTo(0,ct);
+        }
+        else{
+            window.scrollTo(0,0);
+            clearInterval(timer);
+        }
+    },10);
+};

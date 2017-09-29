@@ -389,9 +389,12 @@
 .content-footer a:hover{
     color: red;
 }
-.content-footer .eyes,.saying,.love,.save-money{
+.eyes,.saying,.love,.save-money{
     color: gray;
     margin-left: 10px;
+}
+.eyes:hover,.saying:hover,.love:hover,.save-money:hover{
+    color: black;
 }
 .fa-eye,.fa-commenting,.fa-heartbeat,.fa-usd{
     padding-right: 5px;
@@ -595,4 +598,18 @@
 }
 .check-all .fa-chevron-right{
     margin-left: 10px;
+}
+
+#uptop{
+    position: fixed;
+    bottom: -100px;
+    right: 165px;
+}
+#uptop button{
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    background-color: gainsboro;
+    border: 1px solid gainsboro;
+    outline: none;
 }
